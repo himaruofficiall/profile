@@ -1,0 +1,166 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #005bea, #00c6ff);
+    color: #333;
+    padding: 20px;
+}
+
+/* Container Profil */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Kartu Profil */
+.profile-card {
+    background: rgba(255, 255, 255, 0.8); /* Transparan */
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 550px; /* Lebih besar */
+    padding: 40px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Efek blur */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gambar Profil */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: -80px;
+    border: 6px solid #fff;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Nama dan Bio */
+.name {
+    font-size: 2em;
+    color: #333;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Link Sosial Media */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Warna dan Icon untuk Setiap Platform */
+.instagram {
+    background: linear-gradient(135deg, #f09433, #dc2743, #bc1888);
+}
+
+.tiktok {
+    background-color: #69C9D0;
+}
+
+.github {
+    background-color: #333;
+}
+
+/* Hover Effect untuk Tombol Sosial */
+.social-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Bagian Info Tambahan */
+.info-section {
+    text-align: left;
+    padding: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+}
+
+.info-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.info-section p, .info-section ul {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.info-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+        margin-top: -60px;
+    }
+
+    .name {
+        font-size: 1.8em;
+    }
+
+    .bio, .info-section p, .info-section ul {
+        font-size: 1em;
+    }
+
+    .social-link {
+        font-size: 0.9em;
+        width: 100%;
+    }
+}
